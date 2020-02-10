@@ -36,22 +36,19 @@
     float: left;
     width: 50%;
     height: 100vh;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+    .menu-branding.show, .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
   .menu-nav {
     margin: 0;
     padding: 0;
     background: #373737;
     list-style: none;
-    transform: translate3d(0, -100%, 0);
-    transition: all 0.3s ease-out; }
-    .menu-nav.show {
-      transform: translate3d(0, 0, 0); }
+    transform: translate3d(0, -100%, 0); }
   .menu-branding {
     background: #444;
-    transform: translate3d(0, 100%, 0);
-    transition: all 0.3s ease-out; }
-    .menu-branding.show {
-      transform: translate3d(0, 0, 0); }
+    transform: translate3d(0, 100%, 0); }
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
@@ -79,16 +76,16 @@
       color: #eece1a; }
 
 .nav-item:nth-child(1) {
-  transition-delay: 0.125s; }
+  transition-delay: 0.12s; }
 
 .nav-item:nth-child(2) {
-  transition-delay: 0.25s; }
+  transition-delay: 0.24s; }
 
 .nav-item:nth-child(3) {
-  transition-delay: 0.375s; }
+  transition-delay: 0.36s; }
 
 .nav-item:nth-child(4) {
-  transition-delay: 0.5s; }
+  transition-delay: 0.48s; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -97,11 +94,11 @@
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  ul.menu-nav, div.menu-branding {
+  .menu-branding, .menu-nav {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-branding.show {
+    .menu-branding.show, .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;

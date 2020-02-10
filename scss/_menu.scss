@@ -58,14 +58,6 @@
     width: 50%;
     height: 100vh;
     overflow: hidden; //no scroll bars
-  }
-
-  &-nav {
-    margin: 0;
-    padding: 0;
-    background: darken($primary-color, 5);
-    list-style: none;
-    transform: translate3d(0, -100%, 0); //move off the screen to start with
     @include easeOut;
 
     &.show {
@@ -74,15 +66,18 @@
     }
   }
 
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0); //move off the screen to start with
+  }
+
   &-branding {
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
-    @include easeOut;
-
-    &.show {
-      transform: translate3d(0, 0, 0);
-    }
-
+    
     .portrait {
       width: 250px;
       height: 250px;
@@ -122,9 +117,9 @@
   }
 }
 
-// Delay each nav item slide by 0.1s
+// Delay each nav item slide by 0.12s
 @for $i from 1 through 4 {
   .nav-item:nth-child(#{$i}) {
-    transition-delay: $i * 0.125s;
+    transition-delay: $i * 0.12s;
   }
 }
