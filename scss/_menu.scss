@@ -86,7 +86,7 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg);
+      background: url('../img/portrait.jpg');
       border-radius: 50%; //circular border
       border: solid 3px $secondary-color;
     }
@@ -114,10 +114,10 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-
+    @include easeOut();
+    
     &:hover {
       color: $secondary-color;
-      @include easeOut();
     }
   }
 }
@@ -125,6 +125,6 @@
 // Delay each nav item slide by 0.1s
 @for $i from 1 through 4 {
   .nav-item:nth-child(#{$i}) {
-    transition-delay: ($i + 0.1s) * 0.1s
+    transition-delay: $i * 0.125s;
   }
 }

@@ -8,9 +8,7 @@ const navItems = document.querySelectorAll('.nav-item')
 // Set Initial State of Menu
 let showMenu = false;
 
-menuBtn.addEventListener('click', toggleMenu)
-
-toggleMenu = () => {
+const toggleMenu = () => {
   if (!showMenu) {
     menuBtn.classList.add('close')
     menu.classList.add('show')
@@ -30,3 +28,5 @@ toggleMenu = () => {
     showMenu = false
   }
 }
+
+menuBtn.addEventListener('click', toggleMenu)
