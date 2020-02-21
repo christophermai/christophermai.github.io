@@ -28,8 +28,6 @@ h1, h2, h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(
-      lighten($primary-color, 2), 0.5); //lighten a given color by a given multiplier and return the new color, then make it transparent by 0.5
   }
 }
 
